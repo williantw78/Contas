@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestor de Finanças Pessoais</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <h1>📊 Software de Finanças</h1>
+
+    <div class="controls">
+        <button class="btn-add" onclick="adicionarMes()">➕ Adicionar Mês</button>
+        <button class="btn-add" onclick="adicionarServico()">➕ Adicionar Despesa (Serviço)</button>
+        <button class="btn-add" onclick="adicionarReceita()">➕ Adicionar Ganho (Receita)</button>
+    </div>
+
+    <div class="table-container">
+        <h2>💸 Despesas (A Pagar)</h2>
+        <table id="tabelaDespesas">
+            <thead>
+                <tr id="headerDespesas">
+                    <th>Serviços</th>
+                    <th>Retentor</th>
+                    <th class="col-mes" data-mes="06/2026">06/2026</th>
+                    <th>Ações</th>
+                </tr>
+            </thead>
+            <tbody id="bodyDespesas">
+                <tr class="linha-dados">
+                    <td><input type="text" value="Aluguel"></td>
+                    <td>
+                        <select class="select-retentor" onchange="calcularTudo()">
+                            <option value="João">João</option>
+                            <option value="Maria">Maria</option>
+                            <option value="Empresa">Empresa</option>
+                        </select>
+                    </td>
+                    <td><input type="number" class="valor-celula" value="500" oninput="calcularTudo()"></td>
+                    <td><button class="btn-danger" onclick="eliminarLinha(this)">❌</button></td>
+                </tr>
+                <tr class="linha-dados">
+                    <td><input type="text" value="Luz"></td>
+                    <td>
+                        <select class="select-retentor" onchange="calcularTudo()">
+                            <option value="Maria">Maria</option>
+                            <option value="João">João</option>
+                            <option value="Empresa">Empresa</option>
+                        </select>
+                    </td>
+                    <td><input type="number" class="valor-celula" value="60" oninput="calcularTudo()"></td>
+                    <td><button class="btn-danger" onclick="eliminarLinha(this)">❌</button></td>
+                </tr>
+            </tbody>
+            <tfoot>
+                <tr id="totalDespesasRow" class="total-row">
+                    <td colspan="2">TOTAL DESPESAS</td>
+                    <td class="total-mes-despesa">0</td>
+                    <td></td>
+                </tr>
+            </tfoot>
+        </table>
+    </div>
+
+    <div class="table-container">
+        <h2>💰 Ganhos (A Receber)</h2>
+        <table id="tabelaReceitas">
+            <thead>
+                <tr id="headerReceitas">
+                    <th>Ganhos</th>
+                    <th>Retentor</th>
+                    <th class="col-mes" data-mes="06/2026">06/2026</th>
+                    <th>Ações</th>
+                </tr>
+            </thead>
+            <tbody id="bodyReceitas">
+                <tr class="linha-dados">
+                    <td><input type="text" value="Salário"></td>
+                    <td>
+                        <select class="select-retentor" onchange="calcularTudo()">
+                            <option value="Próprio">Próprio</option>
+                            <option value="João">João</option>
+                            <option value="Maria">Maria</option>
+                        </select>
+                    </td>
+                    <td><input type="number" class="valor-celula" value="1500" oninput="calcularTudo()"></td>
+                    <td><button class="btn-danger" onclick="eliminarLinha(this)">❌</button></td>
+                </tr>
+            </tbody>
+            <tfoot>
+                <tr id="totalReceitasRow" class="total-row">
+                    <td colspan="2">TOTAL RECEITAS</td>
+                    <td class="total-mesreceita">0</td>
+                    <td></td>
+                </tr>
+            </tfoot>
+        </table>
+    </div>
+
+    <div class="dashboard">
+        <div class="card">
+            <h3>🧮 Balanço Geral</h3>
+            <p><strong>Total a Receber:</strong> <span id="resumoReceber" class="text-success">0</span> €</p>
+            <p><strong>Total a Pagar:</strong> <span id="resumoPagar" class="text-danger">0</span> €</p>
+            <hr>
+            <p><strong>Saldo Final:</strong> <span id="resumoSaldo">0</span> €</p>
+        </div>
+
+        <div class="card">
+            <h3>👥 Resumo por Retentor (Dívidas)</h3>
+            <div id="resumoRetentores">
+                </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
