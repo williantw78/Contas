@@ -1,0 +1,149 @@
+{
+  "responsaveis": [
+    "willian",
+    "Duda"
+  ],
+  "meses": [
+    "Junho",
+    "Julho"
+  ],
+  "pagar": [
+    {
+      "id": 1780644076118.218,
+      "nome": "Aluguel",
+      "responsavel": "willian",
+      "valores": {
+        "Junho": 500,
+        "Julho": 500
+      }
+    },
+    {
+      "id": 1780644080142.4246,
+      "nome": "Milenium",
+      "responsavel": "Duda",
+      "valores": {
+        "Junho": 230,
+        "Julho": 230
+      }
+    },
+    {
+      "id": 1780644083677.5415,
+      "nome": "Agua",
+      "responsavel": "willian",
+      "valores": {
+        "Junho": 30,
+        "Julho": 30
+      }
+    },
+    {
+      "id": 1780644086149.896,
+      "nome": "Luz",
+      "responsavel": "Duda",
+      "valores": {
+        "Junho": 50,
+        "Julho": 50
+      }
+    },
+    {
+      "id": 1780644091525.4534,
+      "nome": "Internet",
+      "responsavel": "willian",
+      "valores": {
+        "Junho": 45,
+        "Julho": 45
+      }
+    },
+    {
+      "id": 1780644222066.872,
+      "nome": "Gas",
+      "responsavel": "Duda",
+      "valores": {
+        "Junho": 30,
+        "Julho": 30
+      }
+    },
+    {
+      "id": 1780644229770.9268,
+      "nome": "Novobanco Will",
+      "responsavel": "willian",
+      "valores": {
+        "Junho": 55,
+        "Julho": 55
+      }
+    },
+    {
+      "id": 1780644234930.1926,
+      "nome": "Millennium Duda",
+      "responsavel": "Duda",
+      "valores": {
+        "Junho": 50,
+        "Julho": 50
+      }
+    },
+    {
+      "id": 1780644243777.3752,
+      "nome": "WiZink Will",
+      "responsavel": "willian",
+      "valores": {
+        "Junho": 372,
+        "Julho": 0
+      }
+    },
+    {
+      "id": 1780644248609.0671,
+      "nome": "WiZink Duda",
+      "responsavel": "Duda",
+      "valores": {
+        "Junho": 200,
+        "Julho": 0
+      }
+    },
+    {
+      "id": 1780644255329.2268,
+      "nome": "Manutencao Will",
+      "responsavel": "willian",
+      "valores": {
+        "Junho": 9,
+        "Julho": 9
+      }
+    },
+    {
+      "id": 1780644261914.0603,
+      "nome": "Manutenção Duda",
+      "responsavel": "Duda",
+      "valores": {
+        "Junho": 35,
+        "Julho": 35
+      }
+    },
+    {
+      "id": 1780644296273.6248,
+      "nome": "Seg. Social + Contas BR",
+      "responsavel": "willian",
+      "valores": {
+        "Junho": 41,
+        "Julho": 50
+      }
+    }
+  ],
+  "receber": [
+    {
+      "id": 1780644151634.096,
+      "nome": "Salario",
+      "responsavel": "willian",
+      "valores": {
+        "Junho": 1000,
+        "Julho": 1000
+      }
+    },
+    {
+      "id": 1780644154498.3044,
+      "nome": "Salario",
+      "responsavel": "Duda",
+      "valores": {
+        "Junho": 900,
+        "Julho": 900
+      }
+    }
+  ]
+}

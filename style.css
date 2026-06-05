@@ -1,0 +1,215 @@
+:root {
+    --primary: #2563eb;
+    --success: #16a34a;
+    --danger: #dc2626;
+    --dark: #1e293b;
+    --light: #f8fafc;
+    --border: #e2e8f0;
+}
+
+body {
+    font-family: sans-serif;
+    background-color: #f1f5f9;
+    color: var(--dark);
+    margin: 0;
+    padding: 10px; /* Reduzido para poupar espaço nas bordas do telemóvel */
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    background: #fff;
+    padding: 15px; /* Reduzido para ecrãs pequenos */
+    border-radius: 8px;
+    box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1);
+}
+
+h1 {
+    font-size: 24px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+h2 { 
+    font-size: 18px; 
+    color: var(--dark); 
+}
+
+.actions-bar {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 25px;
+}
+
+.actions-bar button, .btn-load {
+    flex: 1; /* Faz os botões principais dividirem o ecrã igualmente */
+    text-align: center;
+}
+
+button {
+    background-color: var(--primary);
+    color: white;
+    border: none;
+    padding: 12px 15px; /* Botões ligeiramente maiores para facilitar o toque */
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 14px;
+    -webkit-tap-highlight-color: transparent;
+}
+
+button:hover { opacity: 0.9; }
+
+.btn-load {
+    background-color: #64748b;
+    color: white;
+    padding: 12px 15px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 14px;
+}
+.btn-load input { display: none; }
+
+.section-actions {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+.section-actions button { flex: 1; }
+
+.btn-small { padding: 8px 12px; font-size: 13px; margin-bottom: 10px; width: 100%; }
+.btn-add { background-color: var(--success); }
+.btn-remove { background-color: var(--danger); }
+.btn-delete-row { background-color: #94a3b8; padding: 6px 12px; font-size: 14px; }
+
+.input-row {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+.input-row input { flex: 1; }
+
+input[type="text"], select {
+    padding: 10px;
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    font-size: 16px; /* Evita que o iOS faça zoom automático ao focar no campo */
+}
+
+.tags-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 20px;
+}
+
+.tag {
+    background: #e2e8f0;
+    padding: 6px 12px;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 14px;
+}
+
+.tag span {
+    color: var(--danger);
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.table-wrapper {
+    overflow-x: auto; /* Permite deslizar a tabela para os lados no telemóvel */
+    margin-bottom: 30px;
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    -webkit-overflow-scrolling: touch; /* Rolagem suave no iOS */
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+}
+
+th, td {
+    padding: 10px;
+    border-bottom: 1px solid var(--border);
+    min-width: 110px;
+}
+
+th { background-color: var(--light); font-size: 14px; }
+
+tfoot tr {
+    font-weight: bold;
+    background-color: var(--light);
+}
+
+.input-cell {
+    width: 90px;
+    padding: 8px;
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    text-align: right;
+    font-size: 16px;
+}
+
+.summary-section {
+    background: var(--light);
+    padding: 15px;
+    border-radius: 6px;
+    border: 1px solid var(--border);
+}
+
+.select-box { 
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-bottom: 20px; 
+}
+.select-box select { width: 100%; }
+
+.dashboard-totals {
+    display: flex;
+    flex-direction: column; /* Empilha os totais verticalmente no telemóvel */
+    gap: 12px;
+    margin-top: 25px;
+}
+
+.dash-card {
+    background: white;
+    padding: 15px;
+    border-radius: 6px;
+    border: 1px solid var(--border);
+    text-align: center;
+}
+
+.dash-card h3 { margin: 0 0 5px 0; font-size: 14px; color: #64748b; }
+.dash-card p { margin: 0; font-size: 20px; font-weight: bold; }
+
+.negative { background-color: #fef2f2; color: var(--danger) !important; border-color: #fca5a5; }
+.positive { background-color: #f0fdf4; color: var(--success) !important; border-color: #86efac; }
+
+.person-breakdown {
+    background: white;
+    padding: 12px;
+    border-radius: 6px;
+    margin-bottom: 10px;
+    border: 1px solid var(--border);
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+/* Regras para ecrãs maiores (Tablets e Computadores) */
+@media (min-width: 768px) {
+    body { padding: 20px; }
+    .container { padding: 30px; }
+    h1 { font-size: 32px; text-align: left; }
+    h2 { font-size: 24px; }
+    .btn-small { width: auto; }
+    .select-box { flex-direction: row; align-items: center; }
+    .dashboard-totals { flex-direction: row; gap: 20px; }
+    .dash-card p { font-size: 24px; }
+}
