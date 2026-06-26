@@ -1,0 +1,173 @@
+{
+    "users": [
+        "Willian",
+        "Eduarda"
+    ],
+    "months": [
+        "2026-07"
+    ],
+    "expenses": [
+        {
+            "id": 1,
+            "name": "Aluguel",
+            "type": "recorrente",
+            "user": "Willian",
+            "values": {},
+            "paidStatuses": {}
+        },
+        {
+            "id": 2,
+            "name": "Millennium",
+            "type": "recorrente",
+            "user": "Eduarda",
+            "values": {},
+            "paidStatuses": {}
+        },
+        {
+            "id": 3,
+            "name": "Gás",
+            "type": "unico",
+            "user": "Eduarda",
+            "values": {},
+            "paidStatuses": {}
+        },
+        {
+            "id": 4,
+            "name": "Luz",
+            "type": "unico",
+            "user": "Eduarda",
+            "values": {},
+            "paidStatuses": {}
+        },
+        {
+            "id": 5,
+            "name": "Agua",
+            "type": "unico",
+            "user": "Willian",
+            "values": {},
+            "paidStatuses": {}
+        },
+        {
+            "id": 6,
+            "name": "WiZink Will",
+            "type": "unico",
+            "user": "Willian",
+            "values": {},
+            "paidStatuses": {}
+        },
+        {
+            "id": 7,
+            "name": "WiZink Duda",
+            "type": "unico",
+            "user": "Eduarda",
+            "values": {},
+            "paidStatuses": {}
+        },
+        {
+            "id": 8,
+            "name": "Novo Banco Will",
+            "type": "recorrente",
+            "user": "Willian",
+            "values": {},
+            "paidStatuses": {}
+        },
+        {
+            "id": 9,
+            "name": "Millennium Duda",
+            "type": "recorrente",
+            "user": "Eduarda",
+            "values": {},
+            "paidStatuses": {}
+        },
+        {
+            "id": 10,
+            "name": "Internet",
+            "type": "recorrente",
+            "user": "Willian",
+            "values": {},
+            "paidStatuses": {}
+        },
+        {
+            "id": 11,
+            "name": "Manutenção Duda",
+            "type": "recorrente",
+            "user": "Eduarda",
+            "values": {},
+            "paidStatuses": {}
+        },
+        {
+            "id": 12,
+            "name": "Manutenção Will",
+            "type": "recorrente",
+            "user": "Willian",
+            "values": {},
+            "paidStatuses": {}
+        },
+        {
+            "id": 13,
+            "name": "Segurança Social",
+            "type": "recorrente",
+            "user": "Eduarda",
+            "values": {},
+            "paidStatuses": {}
+        },
+        {
+            "id": 14,
+            "name": "Academia",
+            "type": "recorrente",
+            "user": "Willian",
+            "values": {},
+            "paidStatuses": {}
+        },
+        {
+            "id": 15,
+            "name": "Segurança Social",
+            "type": "recorrente",
+            "user": "Eduarda",
+            "values": {},
+            "paidStatuses": {}
+        },
+        {
+            "id": 16,
+            "name": "Contas Brasil",
+            "type": "unico",
+            "user": "Willian",
+            "values": {},
+            "paidStatuses": {}
+        },
+        {
+            "id": 17,
+            "name": "Spotify",
+            "type": "recorrente",
+            "user": "Willian",
+            "values": {},
+            "paidStatuses": {}
+        },
+        {
+            "id": 18,
+            "name": "Seguro (Carro e Moto)",
+            "type": "unico",
+            "user": "Willian",
+            "values": {},
+            "paidStatuses": {}
+        }
+    ],
+    "incomes": [
+        {
+            "id": 1,
+            "name": "Salário",
+            "user": "Willian",
+            "values": {}
+        },
+        {
+            "id": 2,
+            "name": "Salario Duda",
+            "user": "Willian",
+            "values": {}
+        }
+    ],
+    "bankBalances": {
+        "Willian": {},
+        "Eduarda": {}
+    }
+}
