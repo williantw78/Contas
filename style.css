@@ -1,0 +1,335 @@
+/* ==========================================================================
+   1. VARIÁVEIS DE DESIGN E CONFIGURAÇÕES GERAIS
+   ========================================================================== */
+:root {
+    --primary-color: #2563eb;
+    --primary-hover: #1d4ed8;
+    --secondary-color: #64748b;
+    --text-color: #1e293b;
+    --background: #f8fafc;
+    --card-bg: #ffffff;
+    --border-color: #e2e8f0;
+    --success: #10b981;
+    --danger: #ef4444;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    background-color: var(--background);
+    color: var(--text-color);
+    line-height: 1.5;
+    padding: 20px 10px;
+}
+
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+/* ==========================================================================
+   2. CABEÇALHO PRINCIPAL E COMPONENTES DE INTERFACE
+   ========================================================================== */
+.main-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+    padding-bottom: 15px;
+    border-bottom: 2px solid var(--border-color);
+}
+
+.main-header h1 {
+    font-size: 1.6rem;
+    color: var(--text-color);
+}
+
+.main-header p {
+    font-size: 14px;
+    color: var(--secondary-color);
+    margin-top: 4px;
+}
+
+/* Botões */
+.btn {
+    background-color: var(--primary-color);
+    color: #ffffff;
+    border: none;
+    padding: 10px 16px;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background 0.2s ease;
+    text-align: center;
+}
+
+.btn:hover {
+    background-color: var(--primary-hover);
+}
+
+.btn-secondary {
+    background-color: #f1f5f9;
+    color: var(--text-color);
+    border: 1px solid var(--border-color);
+}
+
+.btn-secondary:hover {
+    background-color: #e2e8f0;
+}
+
+.btn-primary-link {
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+}
+
+/* Inputs, Selects e Formulários */
+input[type="text"], input[type="month"], input[type="password"], select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    font-size: 14px;
+    background-color: #ffffff;
+    color: var(--text-color);
+    transition: border-color 0.15s ease;
+}
+
+input:focus, select:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+}
+
+/* Seletor específico de mês */
+.month-selector-card select {
+    margin-top: 8px;
+    font-weight: bold;
+}
+
+/* ==========================================================================
+   3. ESTRUTURA VISUAL DOS QUADRADOS (CARDS)
+   ========================================================================== */
+.card {
+    background: var(--card-bg) !important;
+    border-radius: 12px;
+    padding: 20px;
+    margin-bottom: 20px;
+    border: 1px solid var(--border-color);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.02), 0 1px 2px rgba(0, 0, 0, 0.04);
+}
+
+.card h2 {
+    font-size: 1.15rem;
+    margin-bottom: 12px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: var(--text-color);
+}
+
+.section-desc {
+    font-size: 13px;
+    color: var(--secondary-color);
+    margin-bottom: 15px;
+    line-height: 1.4;
+}
+
+/* ==========================================================================
+   4. DESIGN EXCLUSIVO DO DASHBOARD COMPACTO
+   ========================================================================== */
+.compact-dashboard-card {
+    padding: 18px;
+}
+
+.compact-dashboard {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    overflow: hidden;
+    margin-top: 10px;
+}
+
+.compact-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 16px;
+    background: #ffffff;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.compact-item:last-child {
+    border-bottom: none;
+}
+
+.compact-item .label {
+    font-size: 13px;
+    font-weight: 500;
+    color: var(--secondary-color);
+}
+
+.compact-item .value {
+    font-size: 14px;
+    font-weight: 700;
+    font-family: monospace;
+}
+
+/* Estilização das Cores do Resumo */
+.total-income { color: var(--success); }
+.total-expense { color: var(--danger); }
+
+/* Linha Dinâmica do Saldo Restante */
+.total-balance-row {
+    background-color: #f8fafc;
+    border-top: 1.5px dashed var(--border-color);
+    padding: 14px 16px;
+}
+
+.total-balance-row .label {
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--text-color);
+}
+
+.total-balance-row .value {
+    font-size: 16px;
+}
+
+/* Estados de Alerta do Quadrado de Resumo */
+.total-balance-row.balance-positive {
+    background-color: #f0fdf4 !important;
+    color: #166534 !important;
+}
+
+.total-balance-row.balance-negative {
+    background-color: #fef2f2 !important;
+    color: #991b1b !important;
+}
+
+/* ==========================================================================
+   5. TABELAS DE DADOS E FORMATAÇÃO DE LINHAS
+   ========================================================================== */
+.table-container {
+    width: 100%;
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 5px;
+}
+
+th, td {
+    padding: 10px 8px;
+    border-bottom: 1px solid var(--border-color);
+    vertical-align: middle;
+    font-size: 13px;
+}
+
+th {
+    background-color: #f8fafc;
+    font-weight: 600;
+    color: var(--secondary-color);
+    text-align: left;
+}
+
+/* Inputs de introdução de valores monetários dentro das tabelas */
+.currency-input {
+    text-align: right;
+    font-family: monospace;
+    font-weight: bold;
+    width: 100%;
+    max-width: 120px;
+    padding: 6px 8px;
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+}
+
+/* Alinhamento de colunas por tabela */
+#expenses-table th:nth-child(2), #expenses-table td:nth-child(2) { text-align: center; width: 80px; }
+#expenses-table th:nth-child(3), #expenses-table td:nth-child(3) { text-align: right; width: 130px; }
+#expenses-table tfoot td:last-child { text-align: right; }
+
+#incomes-table th:last-child, #incomes-table td:last-child { text-align: right; width: 130px; }
+#incomes-table tfoot td:last-child { text-align: right; }
+
+#bank-balances-table th:nth-child(2), #bank-balances-table td:nth-child(2),
+#bank-balances-table th:nth-child(3), #bank-balances-table td:nth-child(3) { text-align: right; }
+
+/* Detalhes menores e botões de remoção */
+.meta-info {
+    display: block;
+    font-size: 11px;
+    color: var(--secondary-color);
+    margin-top: 2px;
+}
+
+.delete-row-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 12px;
+    margin-right: 4px;
+}
+
+/* Tags visuais dos responsáveis (Configurações) */
+.tags-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 10px;
+}
+
+.tag {
+    background: #e2e8f0;
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 13px;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-weight: 500;
+}
+
+.tag .remove-btn {
+    cursor: pointer;
+    color: var(--danger);
+    font-weight: bold;
+}
+
+/* ==========================================================================
+   6. RESPONSIVIDADE (ECRÃS MÓVEIS / TELEMÓVEIS)
+   ========================================================================== */
+@media (max-width: 600px) {
+    .main-header {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 12px;
+        text-align: center;
+    }
+
+    .main-header div {
+        text-align: center;
+    }
+
+    .currency-input {
+        max-width: 95px;
+        font-size: 12px;
+    }
+    
+    th, td {
+        font-size: 12px;
+        padding: 8px 4px;
+    }
+}

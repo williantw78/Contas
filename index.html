@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestão Financeira</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        <header class="main-header">
+            <div>
+                <h1>📊 Painel de Controle</h1>
+                <p>Visualização e Resumo Mensal .: Versão Limpa 3.2 :.</p>
+            </div>
+            <a href="config.html" class="btn btn-primary-link">
+                ⚙️ Gerir Dados / Configurações
+            </a>
+        </header>
+		
+        <section class="card month-selector-card">
+            <h3>Mês de Análise</h3>
+            <select id="dashboard-month-select" onchange="updateDashboard()"></select>
+		</section>
+		
+       <!-- Aqui estava o Resumo Global e Saldo em Conta Bancaria -->
+ 
+        <section class="card">
+            <div class="card-header">
+                <h2><span class="icon">💸</span> Contas a Pagar (Serviços)</h2>
+            </div>
+            <div class="table-container">
+                <table id="expenses-table">
+                    <thead></thead>
+                    <tbody></tbody>
+                    <tfoot></tfoot>
+                </table>
+            </div>
+        </section>
+
+        <section class="card">
+            <div class="card-header">
+                <h2><span class="icon">💰</span> Valores a Receber (Receitas)</h2>
+            </div>
+            <div class="table-container">
+                <table id="incomes-table">
+                    <thead></thead>
+                    <tbody></tbody>
+                    <tfoot></tfoot>
+                </table>
+            </div>
+        </section>
+		
+		 <section class="card compact-dashboard-card">
+            <h2><span class="icon">📈</span> Resumo Financeiro Global</h2>
+            <div class="compact-dashboard">
+                <div class="compact-item">
+                    <span class="label">Total a Receber:</span>
+                    <span class="value total-income" id="dash-total-income">€0,00</span>
+                </div>
+                <div class="compact-item">
+                    <span class="label">Total a Pagar:</span>
+                    <span class="value total-expense" id="dash-total-expense">€0,00</span>
+                </div>
+                <div class="compact-item total-balance-row" id="dash-balance-box">
+                    <span class="label">Saldo Restante do Mês:</span>
+                    <span class="value" id="dash-balance-value">€0,00</span>
+                </div>
+            </div>
+        </section>
+
+        <section class="card">
+            <h2><span class="icon">🏦</span> Saldo em Conta Bancária por Responsável</h2>
+            <p class="section-desc">Introduza abaixo o dinheiro total disponível na sua conta para este mês. O "Disponível Real" é deduzido automaticamente à medida que marca os serviços como pagos.</p>
+            <div class="table-container">
+                <table id="bank-balances-table">
+                    <thead>
+                        <tr>
+                            <th>Responsável</th>
+                            <th style="text-align: right; width: 150px;">Saldo Inicial</th>
+                            <th style="text-align: right; width: 150px;">Disponível Real</th>
+                        </tr>
+                    </thead>
+                    <tbody></tbody>
+                </table>
+            </div>
+        </section>
+		
+
+        <section class="card">
+            <h2><span class="icon">👥</span> Resumo de Rateio por Responsável</h2>
+            <div class="table-container">
+                <table id="breakdown-table">
+                    <thead>
+                        <tr>
+                            <th>Responsável</th>
+                            <th style="text-align: right;">Ganhos</th>
+                            <th style="text-align: right;">Despesas</th>
+                            <th style="text-align: right;">Saldo Final</th>
+                        </tr>
+                    </thead>
+                    <tbody></tbody>
+                </table>
+            </div>
+        </section>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
