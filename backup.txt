@@ -12,7 +12,9 @@
             "name": "Aluguel",
             "type": "recorrente",
             "user": "Willian",
-            "values": {},
+            "values": {
+                "2026-07": 500
+            },
             "paidStatuses": {}
         },
         {
@@ -20,7 +22,9 @@
             "name": "Millennium",
             "type": "recorrente",
             "user": "Eduarda",
-            "values": {},
+            "values": {
+                "2026-07": 214
+            },
             "paidStatuses": {}
         },
         {
@@ -28,7 +32,9 @@
             "name": "Gás",
             "type": "unico",
             "user": "Eduarda",
-            "values": {},
+            "values": {
+                "2026-07": 27.32
+            },
             "paidStatuses": {}
         },
         {
@@ -36,7 +42,9 @@
             "name": "Luz",
             "type": "unico",
             "user": "Eduarda",
-            "values": {},
+            "values": {
+                "2026-07": 33.72
+            },
             "paidStatuses": {}
         },
         {
@@ -44,7 +52,9 @@
             "name": "Agua",
             "type": "unico",
             "user": "Willian",
-            "values": {},
+            "values": {
+                "2026-07": 25.19
+            },
             "paidStatuses": {}
         },
         {
@@ -52,7 +62,9 @@
             "name": "WiZink Will",
             "type": "unico",
             "user": "Willian",
-            "values": {},
+            "values": {
+                "2026-07": 604
+            },
             "paidStatuses": {}
         },
         {
@@ -60,7 +72,9 @@
             "name": "WiZink Duda",
             "type": "unico",
             "user": "Eduarda",
-            "values": {},
+            "values": {
+                "2026-07": 204
+            },
             "paidStatuses": {}
         },
         {
@@ -68,7 +82,9 @@
             "name": "Novo Banco Will",
             "type": "recorrente",
             "user": "Willian",
-            "values": {},
+            "values": {
+                "2026-07": 55
+            },
             "paidStatuses": {}
         },
         {
@@ -76,7 +92,9 @@
             "name": "Millennium Duda",
             "type": "recorrente",
             "user": "Eduarda",
-            "values": {},
+            "values": {
+                "2026-07": 50
+            },
             "paidStatuses": {}
         },
         {
@@ -84,7 +102,9 @@
             "name": "Internet",
             "type": "recorrente",
             "user": "Willian",
-            "values": {},
+            "values": {
+                "2026-07": 46
+            },
             "paidStatuses": {}
         },
         {
@@ -92,7 +112,9 @@
             "name": "Manutenção Duda",
             "type": "recorrente",
             "user": "Eduarda",
-            "values": {},
+            "values": {
+                "2026-07": 3.5
+            },
             "paidStatuses": {}
         },
         {
@@ -100,7 +122,9 @@
             "name": "Manutenção Will",
             "type": "recorrente",
             "user": "Willian",
-            "values": {},
+            "values": {
+                "2026-07": 8.3
+            },
             "paidStatuses": {}
         },
         {
@@ -108,7 +132,9 @@
             "name": "Segurança Social",
             "type": "recorrente",
             "user": "Eduarda",
-            "values": {},
+            "values": {
+                "2026-07": 11
+            },
             "paidStatuses": {}
         },
         {
@@ -148,6 +174,22 @@
             "name": "Seguro (Carro e Moto)",
             "type": "unico",
             "user": "Willian",
+            "values": {},
+            "paidStatuses": {}
+        },
+        {
+            "id": 19,
+            "name": "Outros",
+            "type": "unico",
+            "user": "Willian",
+            "values": {},
+            "paidStatuses": {}
+        },
+        {
+            "id": 20,
+            "name": "Outros",
+            "type": "unico",
+            "user": "Eduarda",
             "values": {},
             "paidStatuses": {}
         }
